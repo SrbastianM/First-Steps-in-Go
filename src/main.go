@@ -30,4 +30,40 @@ func main() {
 	area := base * base
 
 	fmt.Println(area, areaRectangle, areaTrapezoid)
+
+	// PRINTF %d = integer %s = string, %v = variable
+	nombre := "Pedro"
+	edad := 25
+	fmt.Printf("Mi nombre es %s y tengo %d anios \n", nombre, edad)
+	// Short Exercise: How to use For
+	counter := 10
+	for counter >= 0 {
+		if counter == 0 {
+			break
+		}
+		counter--
+		fmt.Println(counter)
+	}
+
+	// password and username validation and is pair or not
+	const pass string = "1234"
+	const user string = "test"
+	isPair := func(n int) bool {
+		if n%2 == 0 {
+			return true
+		} else {
+			return false
+		}
+	}
+
+	validation := func(user string, pass string) bool {
+
+		if user == "test" && pass == "1234" {
+			return true
+		} else {
+			return false
+		}
+	}
+	fmt.Println(validation(user, pass))
+	fmt.Println(isPair(2))
 }
