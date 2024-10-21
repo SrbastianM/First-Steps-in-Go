@@ -4,6 +4,20 @@ import (
 	"fmt"
 )
 
+func isPalindrome(s string) bool {
+	var reverse string
+
+	for i := len(s) - 1; i >= 0; i-- {
+		reverse += string(s[i])
+	}
+	if reverse == s {
+		fmt.Println("Is palindrome")
+		return true
+	} else {
+		fmt.Println("Not a palindrome")
+		return false
+	}
+}
 func main() {
 	const pi float64 = 3.14
 	fmt.Println("Hello, World!", pi)
@@ -66,4 +80,11 @@ func main() {
 	}
 	fmt.Println(validation(user, pass))
 	fmt.Println(isPair(2))
+
+	slice := []string{"test", "pedro", "gaga"}
+	for i, e := range slice {
+		fmt.Println(i, e)
+	}
+	isPalindrome("hello")
+	isPalindrome("kayak")
 }
